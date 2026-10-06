@@ -38,31 +38,33 @@ public class Estudante {
 
     //gets da classe
     public String getMatricula() {
-        return this.matricula;
+        return matricula;
     }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public String getInstituicao() {
-        return this.instituicao;
+        return instituicao;
     }
 
     public String getRota() {
-        return this.rota;
+        return rota;
     }
 
     public String getTurnoIda() {
-        return this.turnoIda;
+        return turnoIda;
     }
 
     public String getTurnoVolta() {
-        return this.turnoVolta;
+        return turnoVolta;
     }
 
     public String getSituacaoPag() {
-        return this.situacaoPag;
+        return situacaoPag;
     }
+
+    public Estudante() {}
 
 }
