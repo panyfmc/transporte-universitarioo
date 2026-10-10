@@ -3,32 +3,30 @@ public class Motorista {
     private String nome;
     private String cnh;
     private String telefone;
-    private String disponibilidade;
-    private String turnos;
 
+    // Construtor com os dados obrigatórios: não existe mais motorista "pela metade".
+    public Motorista(String cpf, String nome, String cnh, String telefone) {
+        setCpf(cpf);
+        setNome(nome);
+        setCnh(cnh);
+        setTelefone(telefone);
+    }
 
+    //sets da classe (agora validam o dado recebido)
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+        this.cpf = Validador.exigirTexto(cpf, "cpf");
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = Validador.exigirTexto(nome, "nome");
     }
 
     public void setCnh(String cnh) {
-        this.cnh = cnh;
+        this.cnh = Validador.exigirTexto(cnh, "cnh");
     }
 
     public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public void setDisponibilidade(String disponibilidade) {
-        this.disponibilidade = disponibilidade;
-    }
-
-    public void setTurnos(String turnos) {
-        this.turnos = turnos;
+        this.telefone = Validador.exigirTexto(telefone, "telefone");
     }
 
     //gets da classe
@@ -48,15 +46,8 @@ public class Motorista {
         return telefone;
     }
 
-    public String getDisponibilidade() {
-        return disponibilidade;
+    @Override
+    public String toString() {
+        return nome;
     }
-
-    public String getTurnos() {
-        return turnos;
-    }
-
-    public Motorista() {}
-
-
 }
